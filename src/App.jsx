@@ -12,14 +12,11 @@ export default function App() {
   const [isShow, setIsShow] = useState(false);
 
   const getJoke = () => {
-    axios
-      .get('http://api.icndb.com/jokes/random')
-      /* .then((response) => response.data.value.joke) */
-      .then(({ data }) => {
-        const datas = data.value.joke;
-        datas.replace(/['"]+/g, '');
-        setJoke(datas);
-      });
+    axios.get('http://api.icndb.com/jokes/random').then(({ data }) => {
+      const datas = data.value.joke;
+      datas.replace(/['"]+/g, '');
+      setJoke(datas);
+    });
   };
 
   return (
