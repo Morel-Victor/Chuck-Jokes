@@ -19,3 +19,4 @@ It comes with a lo of tools with a asic config:
 ### Install `husky`, which will check your code everytime you commit files
 
 - `npm run prepare`
+# Chuck-Jokes
