@@ -1,22 +1,11 @@
-# Template for Frontend project
+# Chuck Jokes ![image](https://user-images.githubusercontent.com/69718187/143036530-e38b45bb-9974-4fae-9180-b1661ecea68e.png)
 
-## Why this project
-This repo aims to provide a comfortable Developer Experience (DX) to newbie React developpers.
-It comes with a lo of tools with a asic config:
-- Create React App (CRA)
-- ESLint
-- Prettier
-- StyleLint
+Random joke with chuck norris Api with animation
 
-## First steps
+## Getting started 📌
 
-### Install these extensions for VSCode
+1 - Fork the project
 
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [StyleLint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+2 - in your terminal install packages `npm install i`
 
-### Install `husky`, which will check your code everytime you commit files
-
-- `npm run prepare`
-# Chuck-Jokes
+3 - run your local server `npm run start`
