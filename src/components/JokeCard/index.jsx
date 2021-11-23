@@ -6,8 +6,6 @@ export default function JokeCard({ joke }) {
     <Container>
       <Blockquote>
         {joke}
-        <br />
-        <br />
         <cite>&nbsp;~ Chuck norris ~</cite>
       </Blockquote>
     </Container>

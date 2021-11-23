@@ -3,12 +3,9 @@ import { useState } from 'react';
 import { Background, Title, Button } from 'style';
 import { Reset } from 'styled-reset';
 import Cards from './components/ImgCard/index';
-
 import JokeCard from './components/JokeCard/index';
 
-const defaults = [
-  'Product Owners never ask Chuck Norris for more features. They ask for mercy.',
-];
+const defaults = ['Welcome to my ranch friend Click on the button if you dare'];
 
 export default function App() {
   const [joke, setJoke] = useState(defaults);
@@ -19,8 +16,9 @@ export default function App() {
       .get('http://api.icndb.com/jokes/random')
       /* .then((response) => response.data.value.joke) */
       .then(({ data }) => {
-        setJoke(data.value.joke);
-        console.log(data.value.joke);
+        const datas = data.value.joke;
+        datas.replace(/['"]+/g, '');
+        setJoke(datas);
       });
   };
 
@@ -35,7 +33,9 @@ export default function App() {
           onMouseLeave={() => setIsShow(false)}
           primary
           type="button"
-          onClick={getJoke}
+          onClick={() => {
+            getJoke();
+          }}
         >
           Ramdom Joke
         </Button>

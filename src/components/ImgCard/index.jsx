@@ -5,8 +5,8 @@ import chuck from '../../assets/chuck.jpg';
 
 export default function Cards({ isShow }) {
   return (
-    <div className="cards">
-      {isShow && <Tooltip>At your hown risk</Tooltip>}
+    <div>
+      {isShow && <Tooltip>At your own risk</Tooltip>}
       <ImgChuck src={chuck} alt="the best" />
     </div>
   );
