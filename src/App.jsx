@@ -10,24 +10,36 @@ const defaults = ['Welcome to my ranch friend Click on the button if you dare'];
 export default function App() {
   const [joke, setJoke] = useState(defaults);
   const [isShow, setIsShow] = useState(false);
+  const [isOwnRisk, setIsOwnRisk] = useState(false);
 
   const getJoke = () => {
     axios.get('http://api.icndb.com/jokes/random').then(({ data }) => {
       const datas = data.value.joke;
       datas.replace(/['"]+/g, '');
       setJoke(datas);
+      console.log();
     });
   };
+
+  function animationHat() {
+    setIsShow(true);
+    setIsOwnRisk(true);
+  }
+
+  function animationChuck() {
+    setIsShow(false);
+    setIsOwnRisk(false);
+  }
 
   return (
     <div>
       <Background>
         <Reset />
         <Title>Chuck Joke&apos;s</Title>
-        <Cards isShow={isShow} />
+        <Cards isShow={isShow} isOwnRisk={isOwnRisk} />
         <Button
-          onMouseEnter={() => setIsShow(true)}
-          onMouseLeave={() => setIsShow(false)}
+          onMouseEnter={() => animationHat()}
+          onMouseLeave={() => animationChuck()}
           primary
           type="button"
           onClick={() => {

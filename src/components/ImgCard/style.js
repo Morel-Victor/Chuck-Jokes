@@ -12,9 +12,9 @@ export const Tooltip = styled.div`
   font-size: 20px;
   font-weight: 400;
   position: absolute;
-  margin-top: 250px;
   margin-left: 330px;
-  z-index: 10;
+  z-index: 17;
+  bottom: 480px;
   width: 200px;
   height: 40px;
   color: white;
