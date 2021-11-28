@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import img from './assets/ferme.jpg';
 
 export const Background = styled.div`
-  height: 100vw;
+  height: 100vh;
   background-image: url(${img});
   background-size: cover;
   background-attachment: fixed;
