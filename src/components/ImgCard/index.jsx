@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tooltip, ImgChuck } from './style';
-import chuck from '../../assets/chuck.jpg';
-import chuck2 from '../../assets/chuck2.jpg';
+import { Tooltip, ImgChuck, ImgExplosion, WhiteBackground } from './style';
+import chuck from '../../assets/chuck.png';
+import chuck2 from '../../assets/chuck2.png';
+import imgExplosion from '../../assets/explosion.gif';
 
-export default function Cards({ isShow, isOwnRisk }) {
+export default function ImgCards({ isShow, isOwnRisk, explosion }) {
   return (
     <div>
+      {explosion && <ImgExplosion src={imgExplosion} alt="the best" />}
+      <WhiteBackground>.</WhiteBackground>
       {isShow === false ? (
         <ImgChuck src={chuck2} alt="the best" />
       ) : (
@@ -17,11 +20,13 @@ export default function Cards({ isShow, isOwnRisk }) {
   );
 }
 
-Cards.propTypes = {
+ImgCards.propTypes = {
   isShow: PropTypes.bool,
   isOwnRisk: PropTypes.bool,
+  explosion: PropTypes.string,
 };
-Cards.defaultProps = {
+ImgCards.defaultProps = {
   isShow: false,
   isOwnRisk: false,
+  explosion: '',
 };
