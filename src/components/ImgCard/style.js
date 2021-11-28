@@ -6,6 +6,15 @@ export const ImgChuck = styled.img`
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 10;
+`;
+
+export const WhiteBackground = styled.div`
+  height: 404px;
+  width: 545px;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
 `;
 
 export const Tooltip = styled.div`
@@ -14,7 +23,7 @@ export const Tooltip = styled.div`
   position: absolute;
   margin-left: 330px;
   z-index: 17;
-  bottom: 480px;
+  bottom: 500px;
   width: 200px;
   height: 40px;
   color: white;
@@ -36,5 +45,28 @@ export const Tooltip = styled.div`
     border-top: 3px solid transparent;
     border-right: 29px solid black;
     border-bottom: 9px solid transparent;
+  }
+`;
+
+export const ImgExplosion = styled.img`
+  height: 404px;
+  width: 545px;
+  position: fixed;
+  z-index: 2;
+  top: 167px;
+  animation: fadeIn 3s;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 `;
