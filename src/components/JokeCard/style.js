@@ -11,6 +11,7 @@ export const Container = styled.div`
 
 export const Blockquote = styled.div`
   font-size: 25px;
+  font-family: 'Special Elite', cursive;
   color: #000000;
   padding-right: 50px;
   padding-left: 50px;
