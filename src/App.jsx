@@ -15,8 +15,7 @@ export default function App() {
 
   const getJoke = () => {
     axios.get('http://api.icndb.com/jokes/random').then(({ data }) => {
-      const datas = data.value.joke;
-      datas.replace(/['"]+/g, '');
+      const datas = data.value.joke.split('&quot;');
       setJoke(datas);
     });
   };
